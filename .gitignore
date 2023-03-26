@@ -1,0 +1,13 @@
+# terraform
+.terraform
+
+# terraform state files
+*.tfstate
+*.tfstate.*
+
+# terraform variable files
+*.tfvars
+*.tfvars.json
+
+# tfsec
+.tfsec
