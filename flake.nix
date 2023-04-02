@@ -21,7 +21,7 @@
 
           tfvars-packages = pkgs.buildEnv {
             name = "tfvars-packages";
-            paths = with pkgs; [ flyctl hcl2json jq ];
+            paths = with pkgs; [ flyctl hcl2json jq yq ];
           };
 
         in
