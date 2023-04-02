@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ./fly/default.auto.tfvars (variables)
-FLY_PROVIDER_TOKEN="$(flyctl auth token)"
+FLY_PROVIDER_TOKEN="$(fly auth token)"
 
 # ./fly/default.auto.tfvars
 rm -rf ./fly/default.auto.tfvars
