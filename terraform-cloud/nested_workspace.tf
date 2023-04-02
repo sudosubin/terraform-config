@@ -16,6 +16,12 @@ resource "tfe_workspace" "sudosubin-gitlab" {
   description  = "Terraform workspace for sudosubin/terraform-config/gitlab"
 }
 
+resource "tfe_workspace" "sudosubin-heroku" {
+  name         = "sudosubin-heroku"
+  organization = data.tfe_organization.this.name
+  description  = "Terraform workspace for sudosubin/terraform-config/heroku"
+}
+
 resource "tfe_workspace" "sudosubin-terraform-cloud" {
   name         = "sudosubin-terraform-cloud"
   organization = data.tfe_organization.this.name

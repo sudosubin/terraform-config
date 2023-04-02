@@ -35,6 +35,15 @@ rm -rf ./gitlab/default.auto.tfvars
   echo "gitlab_user_ssh_key = \"$GITLAB_USER_SSH_KEY\""
 } >> ./gitlab/default.auto.tfvars
 
+# ./heroku/default.auto.tfvars (variables)
+HEROKU_PROVIDER_TOKEN=$(jq -r ".[\"api.heroku.com\"].password"  "$XDG_CONFIG_HOME/heroku/config.json")
+
+# ./heroku/default.auto.tfvars
+rm -rf ./heroku/default.auto.tfvars
+{
+  echo "heroku_provider_token = \"$HEROKU_PROVIDER_TOKEN\""
+} >> ./heroku/default.auto.tfvars
+
 # ./terraform-cloud/default.auto.tfvars (variables)
 TFE_PROVIDER_TOKEN="$(hcl2json "$TF_CLI_CONFIG_FILE" | jq -r ".credentials[\"app.terraform.io\"][0].token")"
 
