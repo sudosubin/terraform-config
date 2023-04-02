@@ -16,4 +16,6 @@ terraform {
   required_version = ">=1.4.0"
 }
 
-provider "tfe" {}
+provider "tfe" {
+  token = var.tfe_provider_token
+}

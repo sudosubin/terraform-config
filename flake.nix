@@ -11,6 +11,7 @@
       (system:
         let
           pkgs = import nixpkgs { inherit system; };
+
           envs = [
             {
               name = "TF_CLI_CONFIG_FILE";
@@ -25,9 +26,10 @@
               terraform
             ];
 
-            shellHook = pkgs.lib.concatLines (
-              builtins.map (env: "export ${env.name}=\"${env.value}\"") envs
-            );
+            shellHook = ''
+              PATH="${pkgs.jq}/bin:$PATH" source ./.tools/nix-to-envs.sh '${builtins.toJSON envs}';
+              PATH="${pkgs.jq}/bin:${pkgs.hcl2json}/bin:$PATH" ./.tools/nix-to-tfvars.sh;
+            '';
           };
         }
       );
