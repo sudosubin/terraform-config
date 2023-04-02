@@ -28,7 +28,7 @@
 
             shellHook = ''
               PATH="${pkgs.jq}/bin:$PATH" source ./.tools/nix-to-envs.sh '${builtins.toJSON envs}';
-              PATH="${pkgs.jq}/bin:${pkgs.hcl2json}/bin:$PATH" ./.tools/nix-to-tfvars.sh;
+              PATH="${pkgs.flyctl}/bin:${pkgs.hcl2json}/bin:${pkgs.jq}/bin:$PATH" ./.tools/nix-to-tfvars.sh;
             '';
           };
         }

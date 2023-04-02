@@ -1,3 +1,9 @@
+resource "tfe_workspace" "sudosubin-fly" {
+  name         = "sudosubin-fly"
+  organization = data.tfe_organization.this.name
+  description  = "Terraform workspace for sudosubin/terraform-config/fly"
+}
+
 resource "tfe_workspace" "sudosubin-github" {
   name         = "sudosubin-github"
   organization = data.tfe_organization.this.name

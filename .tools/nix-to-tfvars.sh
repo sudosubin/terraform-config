@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+# ./fly/default.auto.tfvars (variables)
+FLY_PROVIDER_TOKEN="$(flyctl auth token)"
+
+# ./fly/default.auto.tfvars
+rm -rf ./fly/default.auto.tfvars
+{
+  echo "fly_provider_token = \"$FLY_PROVIDER_TOKEN\""
+} >> ./fly/default.auto.tfvars
+
 # ./github/default.auto.tfvars (variables)
 GITHUB_PROVIDER_TOKEN="$(gh auth token -h github.com)"
 GITHUB_USER_GPG_KEY="$(gpg --output - --armor --export sudosubin@gmail.com | sed ':a;N;$!ba;s/\n/\\n/g')"
