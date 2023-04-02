@@ -12,7 +12,7 @@ resource "github_user_gpg_key" "this" {
 
 resource "github_user_ssh_key" "this" {
   title = "Primary"
-  key = var.github_user_ssh_key
+  key   = var.github_user_ssh_key
 
   lifecycle {
     ignore_changes = [key]

@@ -1,4 +1,4 @@
 variable "tfe_provider_token" {
-  type = string
+  type      = string
   sensitive = true
 }

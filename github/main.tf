@@ -17,12 +17,17 @@ terraform {
   required_version = ">=1.4.0"
 }
 
-provider "github" {
-  token    = var.github_provider_token
+module "github_repositories" {
+  source = "./repositories"
+  providers = {
+    github.sudosubin = github.sudosubin
+  }
+
 }
 
 module "github_user" {
-  source = "./user"
+  source    = "./user"
+  providers = { github = github.sudosubin }
 
   github_user_gpg_key = var.github_user_gpg_key
   github_user_ssh_key = var.github_user_ssh_key
