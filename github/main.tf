@@ -24,11 +24,3 @@ module "github_repositories" {
   }
 
 }
-
-module "github_user" {
-  source    = "./user"
-  providers = { github = github.sudosubin }
-
-  github_user_gpg_key = var.github_user_gpg_key
-  github_user_ssh_key = var.github_user_ssh_key
-}
