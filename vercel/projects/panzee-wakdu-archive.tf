@@ -2,12 +2,6 @@ resource "vercel_project" "panzee_wakdu_archive" {
   name                       = "panzee-wakdu-archive"
   framework                  = "nextjs"
   serverless_function_region = "iad1"
-
-  git_repository = {
-    type              = "github"
-    repo              = "sudosubin/panzee-wakdu-archive"
-    production_branch = "main"
-  }
 }
 
 resource "vercel_project_domain" "www_wakduarchive_com" {
