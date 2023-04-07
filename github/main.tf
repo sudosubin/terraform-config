@@ -22,5 +22,4 @@ module "github_repositories" {
   providers = {
     github.sudosubin = github.sudosubin
   }
-
 }

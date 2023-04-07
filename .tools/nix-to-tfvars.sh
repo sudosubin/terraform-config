@@ -52,3 +52,12 @@ rm -rf ./terraform-cloud/default.auto.tfvars
 {
   echo "tfe_provider_token = \"$TFE_PROVIDER_TOKEN\""
 } >> ./terraform-cloud/default.auto.tfvars;
+
+# ./vercel/default.auto.tfvars (variables)
+VERCEL_PROVIDER_TOKEN="$(jq -r ".token" "$XDG_DATA_HOME/com.vercel.cli/auth.json")"
+
+# ./vercel/default.auto.tfvars
+rm -rf ./vercel/default.auto.tfvars
+{
+  echo "vercel_provider_token = \"$VERCEL_PROVIDER_TOKEN\""
+} >> ./vercel/default.auto.tfvars;

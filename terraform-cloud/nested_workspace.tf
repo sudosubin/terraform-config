@@ -27,3 +27,9 @@ resource "tfe_workspace" "sudosubin-terraform-cloud" {
   organization = data.tfe_organization.this.name
   description  = "Terraform workspace for sudosubin/terraform-config/terraform-cloud"
 }
+
+resource "tfe_workspace" "sudosubin-vercel" {
+  name         = "sudosubin-vercel"
+  organization = data.tfe_organization.this.name
+  description  = "Terraform workspace for sudosubin/terraform-config/vercel"
+}
