@@ -44,6 +44,15 @@ rm -rf ./heroku/default.auto.tfvars
   echo "heroku_provider_token = \"$HEROKU_PROVIDER_TOKEN\""
 } >> ./heroku/default.auto.tfvars
 
+# ./sentry/default.auto.tfvars (variables)
+SENTRY_PROVIDER_TOKEN=$(grep token < ~/.sentryclirc | sed "s/token\=//g")
+
+# ./sentry/default.auto.tfvars
+rm -rf ./sentry/default.auto.tfvars
+{
+  echo "sentry_provider_token = \"$SENTRY_PROVIDER_TOKEN\""
+} >> ./sentry/default.auto.tfvars
+
 # ./terraform-cloud/default.auto.tfvars (variables)
 TFE_PROVIDER_TOKEN="$(hcl2json "$TF_CLI_CONFIG_FILE" | jq -r ".credentials[\"app.terraform.io\"][0].token")"
 
