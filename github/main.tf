@@ -17,9 +17,7 @@ terraform {
   required_version = ">=1.4.0"
 }
 
-module "github_repositories" {
-  source = "./repositories"
-  providers = {
-    github.sudosubin = github.sudosubin
-  }
+module "github_repositories_sudosubin" {
+  source    = "./repositories/sudosubin"
+  providers = { github = github.sudosubin }
 }
