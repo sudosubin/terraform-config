@@ -20,3 +20,7 @@ terraform {
 provider "heroku" {
   api_key = var.heroku_provider_token
 }
+
+module "heroku_apps" {
+  source = "./apps"
+}

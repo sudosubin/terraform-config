@@ -1,4 +1,4 @@
-resource "fly_app" "panzee-wakdu-archive-db" {
+resource "fly_app" "panzee_wakdu_archive_db" {
   org  = "personal"
   name = "panzee-wakdu-archive-db"
 }

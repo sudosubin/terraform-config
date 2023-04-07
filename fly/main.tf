@@ -20,3 +20,7 @@ terraform {
 provider "fly" {
   fly_api_token = var.fly_provider_token
 }
+
+module "fly_apps" {
+  source = "./apps"
+}
