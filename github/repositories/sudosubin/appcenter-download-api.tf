@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "appcenter_download_api" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "appcenter-download-api"
+  description = "App center download url api using Vercel edge functions"
+  topics      = ["vercel", "serverless"]
 
   branches = [
     {

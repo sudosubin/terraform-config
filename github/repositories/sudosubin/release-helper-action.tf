@@ -1,8 +1,9 @@
-module "terraform_config" {
+module "release_helper_action" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "release-helper-action"
+  description = "A helper action for releasing actions without hassles"
+  topics      = ["action"]
+  template    = local.typescript_action_template
 
   branches = [
     {

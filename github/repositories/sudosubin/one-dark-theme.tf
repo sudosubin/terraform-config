@@ -1,8 +1,9 @@
-module "terraform_config" {
+module "one_dark_theme" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "one-dark-theme"
+  description = "One dark theme, bring into one"
+  visibility  = "private"
+  topics      = ["one-dark"]
 
   branches = [
     {

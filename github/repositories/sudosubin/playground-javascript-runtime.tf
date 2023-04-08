@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "playground_javascript_runtime" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "playground-javascript-runtime"
+  description = "Simple JavaScript runtime built with rust, powered by deno_core"
+  topics      = ["rust"]
 
   branches = [
     {

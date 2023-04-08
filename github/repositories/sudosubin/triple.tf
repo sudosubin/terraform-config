@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "triple" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "triple"
+  description = "피로그래밍 여행 웹 앱, Triple"
+  topics      = ["django", "sns", "pirogramming"]
 
   branches = [
     {
-      name    = "main"
+      name    = "Jun"
       default = true
       protection = {
         require_signed_commits          = true

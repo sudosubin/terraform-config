@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "one_dark_ulauncher" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "one-dark-ulauncher"
+  description = "One Dark theme for Ulauncher"
+  topics      = ["ulauncher", "one-dark"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

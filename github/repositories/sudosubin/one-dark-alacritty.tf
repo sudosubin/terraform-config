@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "one_dark_alacritty" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "one-dark-alacritty"
+  description = "One Dark theme for Alacritty"
+  topics      = ["alacritty", "one-dark"]
 
   branches = [
     {

@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "kw_winter" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "kw-winter"
+  description = "KW 광운대학교 해커톤 겨울 오감 서비스"
+  topics      = ["ruby", "jekyll"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

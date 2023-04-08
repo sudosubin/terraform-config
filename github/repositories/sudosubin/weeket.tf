@@ -1,8 +1,9 @@
-module "terraform_config" {
+module "weeket" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "weeket"
+  description = "Weeket service repository"
+  visibility  = "private"
+  topics      = []
 
   branches = [
     {
@@ -12,6 +13,9 @@ module "terraform_config" {
         require_signed_commits          = true
         required_linear_history         = true
         require_conversation_resolution = true
+        required_pull_request_reviews = {
+          required_approving_review_count = 1
+        }
       }
     }
   ]

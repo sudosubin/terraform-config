@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "likelion_7th_wordcount" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "likelion-7th-wordcount"
+  description = "멋쟁이 사자처럼 클래스 라이언 과제 1"
+  topics      = ["django", "wordcount", "bootstrap", "likelion"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

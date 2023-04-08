@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "home_manager_secrets" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "home-manager-secrets"
+  description = "Secrets management for nix home-manager"
+  topics      = ["home-manager", "nix", "nixos"]
 
   branches = [
     {

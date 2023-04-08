@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "playground_clean_architecture" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "playground-clean-architecture"
+  description = "A simple frontend clean architecture structured repository"
+  topics      = ["frontend", "clean-architecture"]
 
   branches = [
     {

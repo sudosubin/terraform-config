@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "pass_securid" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "pass-securid"
+  description = "A pass extension for managing RSA SecurIDs"
+  topics      = ["password-store", "securid"]
 
   branches = [
     {

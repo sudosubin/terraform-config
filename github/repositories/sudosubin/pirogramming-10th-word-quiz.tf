@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "pirogramming_10th_word_quiz" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "pirogramming-10th-word-quiz"
+  description = "피로그래밍 10기 단어 퀴즈 프로젝트"
+  topics      = ["python", "django", "pirogramming"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

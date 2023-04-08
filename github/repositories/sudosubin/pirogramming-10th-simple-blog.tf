@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "pirogramming_10th_simple_blog" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "pirogramming-10th-simple-blog"
+  description = "피로그래밍 10기 블로그 프로젝트"
+  topics      = ["python", "django", "blog", "pirogramming"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

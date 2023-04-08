@@ -1,8 +1,9 @@
-module "terraform_config" {
+module "toss_ipd_server_assignment" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "toss-ipd-server-assignment"
+  description = "Toss 사전 과제 (Internal Product)"
+  visibility  = "private"
+  topics      = ["python", "django", "backend"]
 
   branches = [
     {

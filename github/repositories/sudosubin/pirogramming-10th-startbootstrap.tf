@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "pirogramming_10th_startbootstrap" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "pirogramming-10th-startbootstrap"
+  description = "피로그래밍 10기 부트스트랩 클로닝 프로젝트"
+  topics      = ["html", "bootstrap", "pirogramming"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "zeplin_uri_opener" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "zeplin-uri-opener"
+  description = "Open zeplin app uri in your default browser"
+  topics      = ["zeplin"]
 
   branches = [
     {

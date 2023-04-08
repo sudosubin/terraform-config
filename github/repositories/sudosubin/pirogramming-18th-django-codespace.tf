@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "pirogramming_18th_django_codespace" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "pirogramming-18th-django-codespace"
+  description = "피로그래밍 18기 강의 (Django crud)"
+  topics      = ["python", "django", "backend", "pirogramming"]
 
   branches = [
     {

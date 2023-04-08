@@ -1,8 +1,9 @@
-module "terraform_config" {
+module "pragmatapro" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "pragmatapro"
+  description = "PragmataPro font face"
+  visibility  = "private"
+  topics      = ["font", "pragmatapro"]
 
   branches = [
     {

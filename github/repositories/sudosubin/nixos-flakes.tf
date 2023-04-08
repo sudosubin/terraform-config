@@ -1,8 +1,9 @@
-module "terraform_config" {
+module "nixos_flakes" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "nixos-flakes"
+  description = "Personal nix flake files, for development"
+  visibility  = "private"
+  topics      = ["nix", "nixos"]
 
   branches = [
     {

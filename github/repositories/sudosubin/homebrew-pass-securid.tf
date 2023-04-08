@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "homebrew_pass_securid" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "homebrew-pass-securid"
+  description = "pass-securid homebrew tap repository"
+  topics      = ["homebrew", "password-store", "securid"]
 
   branches = [
     {

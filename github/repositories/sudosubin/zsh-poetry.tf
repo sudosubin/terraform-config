@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "zsh_poetry" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "zsh-poetry"
+  description = "Zsh poetry plugin to activate PATH and autocompletions"
+  topics      = ["zsh", "zsh-plugin", "zsh-plugins", "poetry"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "playground_gunicorn" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "playground-gunicorn"
+  description = "Testing gunicorn with python django"
+  topics      = ["django", "gunicorn"]
 
   branches = [
     {

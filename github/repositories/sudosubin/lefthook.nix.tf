@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "lefthook_nix" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "lefthook.nix"
+  description = "Using lefthook with Nix"
+  topics      = ["nix", "lefthook"]
 
   branches = [
     {

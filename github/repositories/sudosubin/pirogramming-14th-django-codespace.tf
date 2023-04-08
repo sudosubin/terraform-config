@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "pirogramming_14th_django_codespace" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "pirogramming-14th-django-codespace"
+  description = "피로그래밍 14기 강의 (Django crud)"
+  topics      = ["python", "django", "backend", "pirogramming"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "ausg_6th_small_chat_awscli" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "ausg-6th-small-chat-awscli"
+  description = "awscli usage tips: AUSG 6th small chat topic"
+  topics      = ["ausg", "awscli", "shell"]
 
   branches = [
     {

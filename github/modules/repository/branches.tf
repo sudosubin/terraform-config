@@ -23,6 +23,19 @@ resource "github_branch_protection" "this" {
   require_conversation_resolution = each.value.protection.require_conversation_resolution
   allows_deletions                = false
 
+  dynamic "required_pull_request_reviews" {
+    for_each = (
+      each.value.protection.required_pull_request_reviews != null
+      ? [each.value.protection.required_pull_request_reviews]
+      : []
+    )
+
+    content {
+      dismiss_stale_reviews           = true
+      required_approving_review_count = required_pull_request_reviews.value.required_approving_review_count
+    }
+  }
+
   depends_on = [
     github_branch.this
   ]

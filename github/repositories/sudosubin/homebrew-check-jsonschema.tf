@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "homebrew_check_jsonschema" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "homebrew-check-jsonschema"
+  description = "check-jsonschema homebrew tap repository"
+  topics      = ["homebrew", "jsonschema", "json-schema"]
 
   branches = [
     {

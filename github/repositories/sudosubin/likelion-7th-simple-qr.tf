@@ -1,12 +1,12 @@
-module "terraform_config" {
+module "likelion_7th_simple_qr" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "likelion-7th-simple-qr"
+  description = "멋쟁이 사자처럼 클래스 라이언 과제 4"
+  topics      = ["django", "qrcode", "qrcode-generator", "likelion"]
 
   branches = [
     {
-      name    = "main"
+      name    = "master"
       default = true
       protection = {
         require_signed_commits          = true

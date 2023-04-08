@@ -1,8 +1,9 @@
-module "terraform_config" {
+module "git_clone_action" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "git-clone-action"
+  description = "A action for cloning git repositories"
+  topics      = ["action"]
+  template    = local.typescript_action_template
 
   branches = [
     {

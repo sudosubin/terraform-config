@@ -99,6 +99,9 @@ variable "branches" {
       require_signed_commits          = bool
       required_linear_history         = bool
       require_conversation_resolution = bool
+      required_pull_request_reviews = optional(object({
+        required_approving_review_count = number
+      }))
     }))
   }))
   default = []

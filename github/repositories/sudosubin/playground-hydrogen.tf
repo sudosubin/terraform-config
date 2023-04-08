@@ -1,8 +1,8 @@
-module "terraform_config" {
+module "playground_hydrogen" {
   source      = "../../modules/repository"
-  name        = "terraform-config"
-  description = "Personal terraform files"
-  topics      = ["terraform"]
+  name        = "playground-hydrogen"
+  description = "Testing Hydrogen with TypeScript"
+  topics      = ["typescript", "shopify", "hydrogen"]
 
   branches = [
     {
