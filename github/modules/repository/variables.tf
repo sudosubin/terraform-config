@@ -90,3 +90,16 @@ variable "template" {
   })
   default = null
 }
+
+variable "branches" {
+  type = list(object({
+    name    = string
+    default = bool
+    protection = optional(object({
+      require_signed_commits          = bool
+      required_linear_history         = bool
+      require_conversation_resolution = bool
+    }))
+  }))
+  default = []
+}
