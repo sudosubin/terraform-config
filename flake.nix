@@ -2,16 +2,21 @@
   description = "sudosubin/terraform-config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem
-      (system:
-        let
-          pkgs = import nixpkgs { inherit system; };
+  outputs = { self, nixpkgs }:
+    let
+      inherit (nixpkgs.lib) genAttrs platforms;
+      forAllSystems = f: genAttrs platforms.unix (system: f (import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      }));
 
+    in
+    {
+      devShells = forAllSystems (pkgs:
+        let
           envs = [
             {
               name = "TF_CLI_CONFIG_FILE";
@@ -26,7 +31,7 @@
 
         in
         {
-          devShell = pkgs.mkShell {
+          default = pkgs.mkShell {
             nativeBuildInputs = with pkgs; [
               terraform
             ];
@@ -36,6 +41,6 @@
               PATH="${tfvars-packages}/bin:$PATH" ./.tools/nix-to-tfvars.sh;
             '';
           };
-        }
-      );
+        });
+    };
 }
